@@ -15,8 +15,6 @@ app.post(
     '/api/survey',(req,res)=>{
         console.log(req.body);
         const{ title, subject, body,recipients } =req.body;
-
-        const recipients2=recipients.split(",");
         
         const survey =new Survey({
             title,
@@ -27,10 +25,9 @@ app.post(
             _user:req.user.id,
             dateSent:Date.now()
         });
-        console.log(recipients+"kk");
-        console.log(recipients+"22");
-        console.log(survey);
-        res.send('hiii');
+        
+        console.log(survey);//This is working(Recipients property is also fine)
+        
         
            
         const mailer = new Mailer(survey,surveyTemplate(survey));
