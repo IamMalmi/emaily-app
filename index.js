@@ -1,5 +1,6 @@
 const express = require('express');
 require('./models/user');
+require('./models/Survey');
 require('./services/passport');
 const mongoose =  require('mongoose');
 const cookieSession = require('cookie-session');
@@ -25,6 +26,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 //authRoutes(app);
 
 if(process.env.NODE_ENV==='production'){
