@@ -41,15 +41,7 @@ if(process.env.NODE_ENV==='production'){
     })
 }
 
-
-
-
 const PORT = process.env.PORT||5000
-
-
 app.listen(PORT);
 
 
-//1010109619259-ue8569rbtmimkafmc12h4tu9sqhrdkja.apps.googleusercontent.com
-
-//d-M-S8t1OdOBoJ_f3plXmTtd
